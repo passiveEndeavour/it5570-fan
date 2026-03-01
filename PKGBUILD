@@ -18,7 +18,7 @@ optdepends=(
 # No compiled source in the AUR package - DKMS builds at install time.
 # The source tarball / git tag is fetched from GitHub.
 source=("${pkgname}-${pkgver}.tar.gz::${url}/archive/refs/tags/v${pkgver}.tar.gz")
-b2sums=('SKIP')   # Replace with real checksum after tagging: b2sum <tarball>
+b2sums=('58613116132613be851e368bbc01674ea8380c646d776917eaad4d0305c1bfa89f405347ce17c4f0fa7dadaf6cfae45925054bb5a9a4a0fbf73bc141966fc40f')
 
 package() {
     local _srcdir="it5570-fan-${pkgver}"
