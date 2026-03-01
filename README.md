@@ -162,7 +162,7 @@ The register map was determined through:
 1. **DSDT analysis** — The ACPI tables revealed the EC at `\_SB_.PCI0.SBRG.EC0_` with command port 0x66 and data port 0x62, but contained no fan control methods — the firmware handles everything internally.
 2. **EC SRAM diffing** — Dumping the full 8KB SRAM at idle, under CPU stress, and during cooldown, then comparing the dumps to identify registers that track temperature, RPM, and duty cycle.
 3. **Brute-force register probing** — Systematically writing to each ACPI EC offset and monitoring fan RPM changes to find the control register (0x0F).
-4. **Cross-referencing** — Comparing findings with the [ec-su_axb35](https://github.com/nicman23/ec-su_axb35-linux) driver for a similar ITE EC platform.
+4. **Cross-referencing** — Comparing findings with the [ec-su_axb35](https://github.com/cmetz/ec-su_axb35-linux) driver for a similar ITE EC platform.
 
 ## hwmon sysfs interface
 
