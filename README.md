@@ -26,6 +26,30 @@ EC:           +51.0°C
 pwm1:             44%
 ```
 
+## Is this driver for me?
+
+If you ran `sensors-detect` and got this message:
+
+```
+Probing for Super-I/O at 0x4e/0x4f
+Trying family `National Semiconductor/ITE'...               Yes
+Found unknown chip with ID 0x5570
+```
+
+Then yes — this is the driver you need. The ITE IT5570 is an embedded controller not recognized by `sensors-detect` or the in-tree `it87` driver. There is no mainline Linux driver for this chip. This module provides the missing hwmon support.
+
+You may also have found this page by searching for:
+- `Found unknown chip with ID 0x5570`
+- `ITE IT5570 Linux fan control`
+- `IT5570 no driver Linux`
+- `IT5570 hwmon driver`
+- `IT5570E sensors-detect unknown chip`
+- `mini PC fan always on Linux`
+- `AceMagic fan control Linux`
+- `Beelink fan control Linux`
+- `MinisForum fan noise Linux`
+- `mini PC fan loud Linux no control`
+
 ## Tested Hardware
 
 | Device | APU | BIOS | EC |
