@@ -1,0 +1,22 @@
+# Kernel build artefacts
+*.o
+*.ko
+*.ko.zst
+*.mod
+*.mod.c
+*.mod.o
+*.symvers
+*.order
+.*.cmd
+.module-common.*
+..module-common.*
+modules.order
+Module.symvers
+.tmp_versions/
+.cache.mk
+
+# Editor/IDE
+.vscode/
+.idea/
+*.swp
+*~
